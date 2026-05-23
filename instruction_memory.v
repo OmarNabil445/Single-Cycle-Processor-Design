@@ -15,7 +15,7 @@ module instruction_memory (
     initial begin
         for (i = 0; i < 1024; i = i + 1)
             mem[i] = 32'h00000013;      // NOP: addi x0, x0, 0
-        $readmemh("instruction_memory.mem", mem);
+        $readmemh("D:/Codes/Vivado/Single-Cycle RISC-V Processor Design Final/Single-Cycle RISC-V Processor Design Final.sim/sim_1/behav/xsim/instruction_memory.mem", mem);
     end
 
     assign instruction = mem[pc[11:2]];
